@@ -1,6 +1,5 @@
 # Al-Qur'an Digital Web App 📖
 
-![Project Banner](https://via.placeholder.com/1200x600?text=Al-Quran+Digital+Preview+Image) 
 Aplikasi web Al-Qur'an digital yang ringan, cepat, dan responsif. Dibangun menggunakan **Vanilla JavaScript** (tanpa framework/library berat) untuk mendemonstrasikan pemahaman mendalam tentang manipulasi DOM, Fetch API, dan Modern CSS.
 
 Aplikasi ini menyediakan bacaan 30 Juz lengkap dengan terjemahan Bahasa Indonesia dan audio murottal per surah.
