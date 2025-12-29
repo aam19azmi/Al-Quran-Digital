@@ -1,0 +1,271 @@
+:root {
+    --primary-color: #10b981; /* Emerald Green */
+    --primary-dark: #059669;
+    --bg-color: #f3f4f6;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --font-ui: 'Poppins', sans-serif;
+    --font-arab: 'Amiri', serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-ui);
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+}
+
+.container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+/* Header */
+header {
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 15px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-box {
+    position: relative;
+    flex: 1;
+    max-width: 400px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px 15px;
+    padding-right: 40px;
+    border: 1px solid #e5e7eb;
+    border-radius: 50px;
+    outline: none;
+    font-family: var(--font-ui);
+}
+
+.search-box i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-light);
+}
+
+/* Main Content */
+main { padding: 30px 0; min-height: 80vh; }
+
+.hidden { display: none !important; }
+
+/* Kaligrafi Bismillah */
+.bismillah-container {
+    text-align: center;
+    margin: 30px 0 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #e5e7eb;
+}
+
+.bismillah-text {
+    font-family: var(--font-arab); /* Font Amiri mendukung karakter ini dengan sangat bagus */
+    font-size: 4rem; /* DIPERBESAR dari 2.5rem ke 4rem agar detail kaligrafi terlihat */
+    color: var(--primary-dark);
+    line-height: 1; /* Rapatkan baris karena karakternya tinggi */
+    font-weight: 400; /* Jangan di-bold agar lekukannya tidak rusak */
+}
+
+/* Update: Header Detail Surah (Glass effect) */
+.surah-header-detail {
+    background: linear-gradient(135deg, #10b981, #047857);
+    color: white;
+    padding: 40px 20px;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+}
+
+/* Grid Surah */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.surah-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #e5e7eb;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.surah-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.1);
+}
+
+.surah-number {
+    background: var(--bg-color);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.surah-info h3 { font-size: 1rem; margin-bottom: 2px; }
+.surah-info p { font-size: 0.8rem; color: var(--text-light); }
+
+.surah-arab {
+    font-family: var(--font-arab);
+    font-size: 1.4rem;
+    color: var(--primary-dark);
+}
+
+/* Detail Surah */
+.btn-back {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-light);
+    font-size: 1rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s;
+}
+
+.btn-back:hover { color: var(--primary-color); }
+
+.surah-header-detail {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.surah-header-detail h2 { font-size: 2rem; margin-bottom: 5px; }
+.surah-header-detail p { opacity: 0.9; font-size: 0.95rem; }
+
+.audio-player { margin-top: 20px; width: 100%; height: 35px; }
+
+/* Ayat List */
+.ayat-item {
+    background: white;
+    padding: 30px 25px; /* Padding lebih besar */
+    border-bottom: 1px solid #f3f4f6;
+    margin-bottom: 0;
+    transition: background 0.2s;
+}
+
+.ayat-item:hover {
+    background: #fafafa;
+}
+
+.ayat-item:last-child {
+    border-bottom: none;
+    border-radius: 0 0 15px 15px;
+}
+
+.ayat-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.ayat-badge {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--primary-color);
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.ayat-text {
+    font-family: 'Amiri', serif;
+    font-size: 2.2rem; /* Font lebih besar */
+    line-height: 2.4;
+    color: #111827; /* Hitam pekat agar kontras */
+    margin: 25px 0;
+    font-weight: 400;
+}
+
+.ayat-translation {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Loading */
+.loading { text-align: center; padding: 50px; }
+.spinner {
+    width: 40px; height: 40px;
+    border: 4px solid #e5e7eb;
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+    .header-content { flex-direction: column; align-items: stretch; }
+    .search-box { max-width: 100%; }
+    .bismillah-text {
+        font-size: 3.5rem; /* Sesuaikan sedikit di layar kecil */
+    }
+}
+@media (max-width: 600px) {
+    .header-content { flex-direction: column; align-items: stretch; }
+    .search-box { max-width: 100%; }
+    .ayat-text { font-size: 1.6rem; }
+    .bismillah-text {
+        font-size: 3rem; /* Sesuaikan sedikit di layar kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .bismillah-text {
+        font-size: 1.5rem; /* Sesuaikan sedikit di layar kecil */
+    }
+}
