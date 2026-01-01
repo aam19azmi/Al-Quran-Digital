@@ -8,7 +8,19 @@ Aplikasi Al-Qur'an digital yang ringan, cepat, dan responsif. Awalnya dibangun s
 
 Aplikasi ini menyediakan bacaan 30 Juz lengkap dengan terjemahan Bahasa Indonesia dan audio murottal per surah secara gratis.
 
-🔗 **Live Demo:** [https://quran.sourcecodejournal.dev](https://quran.sourcecodejournal.dev)
+🔗 **Akses Aplikasi:**
+* **Web Version (Live Demo):** [https://quran.sourcecodejournal.dev](https://quran.sourcecodejournal.dev)
+* **Android Version:** [Download APK v1.0](https://github.com/aam19azmi/Al-Quran-Digital/releases/download/version/Al-Quran-Digital-v1.apk)
+
+---
+
+## 📥 Download Aplikasi Android
+Gunakan tombol di bawah ini untuk mengunduh dan menginstal aplikasi langsung di smartphone kamu:
+
+[![Download APK](https://img.shields.io/badge/Download-APK-brightgreen?style=for-the-badge&logo=android)](https://github.com/aam19azmi/Al-Quran-Digital/releases/download/version/Al-Quran-Digital-v1.apk)
+
+> [!NOTE]
+> Karena aplikasi ini tidak diunduh dari Play Store, saat instalasi mungkin muncul peringatan **"Play Protect"**. Silakan klik **"Detail Selengkapnya"** lalu **"Tetap Instal"**.
 
 ---
 
