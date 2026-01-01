@@ -30,7 +30,6 @@ Aplikasi ini menyediakan bacaan 30 Juz lengkap dengan terjemahan Bahasa Indonesi
 
 ## 📂 Struktur Folder
 
-```text
 Al-Quran-Digital/
 ├── android/            # Proyek Native Android
 ├── node_modules/       # Dependensi Node.js
@@ -45,22 +44,25 @@ Al-Quran-Digital/
 1. Jalankan di Web (Local)
 Buka Command Prompt kamu dan jalankan perintah berikut:
 
+```
 DOS
 
 C:\> git clone [https://github.com/aam19azmi/Al-Quran-Digital.git](https://github.com/aam19azmi/Al-Quran-Digital.git)
 C:\> cd Al-Quran-Digital
 C:\> cd www
 C:\> start index.html
-
+```
 
 2. Build ke Android (APK)
 Pastikan Node.js, Java JDK, dan Android Studio sudah terinstal, lalu jalankan:
 
+```
 DOS
 
 C:\Users\Azmi\Al-Quran-Digital> npm install
 C:\Users\Azmi\Al-Quran-Digital> npx cap copy
 C:\Users\Azmi\Al-Quran-Digital> npx cap open android
+```
 
 
 Di Android Studio: Pilih menu Build > Build Bundle(s) / APK(s) > Build APK(s).
@@ -68,6 +70,7 @@ Di Android Studio: Pilih menu Build > Build Bundle(s) / APK(s) > Build APK(s).
 🧠 Highlight Kode (Logic Penempatan Bismillah)
 JavaScript
 
+```
 // Menampilkan Bismillah kecuali pada Surah Al-Fatihah (1) dan At-Taubah (9)
 let bismillahHTML = '';
 if (data.nomor !== 1 && data.nomor !== 9) {
@@ -77,8 +80,11 @@ if (data.nomor !== 1 && data.nomor !== 9) {
         </div>
     `;
 }
+```
 
 🤝 Kontribusi & Credits
 Data Al-Qur'an dan Audio disediakan oleh EQuran.id. Dikembangkan oleh Azmi Jalaluddin Amron sebagai portofolio pengembangan aplikasi multi-platform.
 
+```
 <p align="center"> Built with ❤️ by <a href="https://sourcecodejournal.dev">Source Code Journal</a> </p>
+```
