@@ -30,6 +30,7 @@ Aplikasi ini menyediakan bacaan 30 Juz lengkap dengan terjemahan Bahasa Indonesi
 
 ## 📂 Struktur Folder
 
+```
 Al-Quran-Digital/
 ├── android/            # Proyek Native Android
 ├── node_modules/       # Dependensi Node.js
@@ -38,6 +39,7 @@ Al-Quran-Digital/
 ├── CNAME               # Custom Domain
 ├── package.json
 └── README.md
+```
 
 
 🚀 Cara Menjalankan & Pengembangan
@@ -85,6 +87,4 @@ if (data.nomor !== 1 && data.nomor !== 9) {
 🤝 Kontribusi & Credits
 Data Al-Qur'an dan Audio disediakan oleh EQuran.id. Dikembangkan oleh Azmi Jalaluddin Amron sebagai portofolio pengembangan aplikasi multi-platform.
 
-```
 <p align="center"> Built with ❤️ by <a href="https://sourcecodejournal.dev">Source Code Journal</a> </p>
-```
