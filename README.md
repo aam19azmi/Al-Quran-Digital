@@ -19,6 +19,7 @@ Gunakan tombol di bawah ini untuk mengunduh dan menginstal aplikasi langsung di 
 
 [![Download APK](https://img.shields.io/badge/Download-APK-brightgreen?style=for-the-badge&logo=android)](https://github.com/aam19azmi/Al-Quran-Digital/releases/download/version/Al-Quran-Digital-v1.apk)
 
+
 > [!NOTE]
 > Karena aplikasi ini tidak diunduh dari Play Store, saat instalasi mungkin muncul peringatan **"Play Protect"**. Silakan klik **"Detail Selengkapnya"** lalu **"Tetap Instal"**.
 
