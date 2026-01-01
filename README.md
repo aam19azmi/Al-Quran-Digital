@@ -1,9 +1,12 @@
-# Al-Qur'an Digital Web App 📖
+Markdown
+
+# Al-Qur'an Digital Web & Mobile App 📖 📱
 
 ![Project Banner](https://sourcecodejournal.dev/assets/projects/Al-Quran_Digital.png)
-Aplikasi web Al-Qur'an digital yang ringan, cepat, dan responsif. Dibangun menggunakan **Vanilla JavaScript** (tanpa framework/library berat) untuk mendemonstrasikan pemahaman mendalam tentang manipulasi DOM, Fetch API, dan Modern CSS.
 
-Aplikasi ini menyediakan bacaan 30 Juz lengkap dengan terjemahan Bahasa Indonesia dan audio murottal per surah.
+Aplikasi Al-Qur'an digital yang ringan, cepat, dan responsif. Awalnya dibangun sebagai Web App menggunakan **Vanilla JavaScript**, kini telah dikembangkan menjadi aplikasi **Android Native** menggunakan **Capacitor**.
+
+Aplikasi ini menyediakan bacaan 30 Juz lengkap dengan terjemahan Bahasa Indonesia dan audio murottal per surah secara gratis.
 
 🔗 **Live Demo:** [https://quran.sourcecodejournal.dev](https://quran.sourcecodejournal.dev)
 
@@ -11,51 +14,61 @@ Aplikasi ini menyediakan bacaan 30 Juz lengkap dengan terjemahan Bahasa Indonesi
 
 ## ✨ Fitur Utama
 
-* **Daftar Surah Lengkap:** Menampilkan 114 surah dengan nama Arab, Latin, arti, dan jumlah ayat.
-* **Pencarian Real-time:** Fitur pencarian cepat (tanpa reload) untuk menemukan surah berdasarkan nama latin atau arti.
-* **Detail Ayat & Terjemahan:** Tampilan ayat yang nyaman dibaca dengan font *Amiri* (Arab) dan *Poppins* (Latin).
-* **Audio Murottal:** Pemutar audio HTML5 terintegrasi di setiap surah.
-* **Logika Kaligrafi Cerdas:** Penambahan kaligrafi *Bismillah* (﷽) otomatis di awal surah (kecuali Al-Fatihah & At-Taubah).
-* **Responsive Design:** Tampilan optimal di Smartphone, Tablet, dan Desktop.
-* **SEO Optimized:** Dilengkapi Meta Tags dan Open Graph untuk visibilitas di mesin pencari dan media sosial.
+* **Multi-Platform:** Web App & Android Native (APK).
+* **Daftar Surah Lengkap:** 114 surah dengan nama Arab, Latin, arti, dan jumlah ayat.
+* **Pencarian Real-time:** Mencari surah tanpa reload halaman.
+* **Audio Murottal:** Pemutar audio terintegrasi di setiap surah.
+* **Logika Kaligrafi:** Penambahan otomatis ﷽ (kecuali Al-Fatihah & At-Taubah).
+* **UI/UX Modern:** Desain *Glassmorphism* yang responsif.
 
 ## 🛠️ Teknologi yang Digunakan
 
-Project ini dibuat dengan **Pure Native Tech Stack** untuk memaksimalkan performa dan SEO:
-
-* **Frontend:** HTML5, CSS3 (CSS Variables, Flexbox, Grid), JavaScript (ES6+).
+* **Frontend:** HTML5, CSS3, JavaScript (ES6+).
+* **Mobile Bridge:** [Capacitor](https://capacitorjs.com/).
 * **Data Fetching:** Fetch API & Async/Await.
-* **Typography:** Google Fonts (Amiri & Poppins).
-* **Icons:** FontAwesome 6.
 * **API:** [EQuran.id API V2](https://equran.id/apidev).
 
 ## 📂 Struktur Folder
 
 ```text
-quran-app/
-├── index.html      # Struktur utama halaman (List & Detail)
-├── style.css       # Styling responsif & Glassmorphism UI
-├── script.js       # Logic (Fetch Data, Search, DOM Rendering)
-└── README.md       # Dokumentasi Proyek
-🚀 Cara Menjalankan (Local)
-Clone repository ini:
+Al-Quran-Digital/
+├── android/            # Proyek Native Android
+├── node_modules/       # Dependensi Node.js
+├── www/                # Aset Web Utama (HTML, CSS, JS)
+├── capacitor.config.json
+├── CNAME               # Custom Domain
+├── package.json
+└── README.md
 
-Bash
 
-git clone [https://github.com/aam19azmi/quran-app.git](https://github.com/aam19azmi/quran-app.git)
-Buka folder project:
+🚀 Cara Menjalankan & Pengembangan
+1. Jalankan di Web (Local)
+Buka Command Prompt kamu dan jalankan perintah berikut:
 
-Bash
+DOS
 
-cd quran-app
-Jalankan: Buka file index.html langsung di browser, atau gunakan ekstensi Live Server di VS Code untuk pengalaman yang lebih baik.
+C:\> git clone [https://github.com/aam19azmi/Al-Quran-Digital.git](https://github.com/aam19azmi/Al-Quran-Digital.git)
+C:\> cd Al-Quran-Digital
+C:\> cd www
+C:\> start index.html
 
-🧠 Highlight Kode (Code Snippets)
-Salah satu tantangan menarik dalam proyek ini adalah logika penempatan Bismillah. Berikut cuplikan kodenya:
 
+2. Build ke Android (APK)
+Pastikan Node.js, Java JDK, dan Android Studio sudah terinstal, lalu jalankan:
+
+DOS
+
+C:\Users\Azmi\Al-Quran-Digital> npm install
+C:\Users\Azmi\Al-Quran-Digital> npx cap copy
+C:\Users\Azmi\Al-Quran-Digital> npx cap open android
+
+
+Di Android Studio: Pilih menu Build > Build Bundle(s) / APK(s) > Build APK(s).
+
+🧠 Highlight Kode (Logic Penempatan Bismillah)
 JavaScript
 
-// Logic: Menampilkan Bismillah kecuali pada Surah Al-Fatihah (1) dan At-Taubah (9)
+// Menampilkan Bismillah kecuali pada Surah Al-Fatihah (1) dan At-Taubah (9)
 let bismillahHTML = '';
 if (data.nomor !== 1 && data.nomor !== 9) {
     bismillahHTML = `
@@ -64,7 +77,8 @@ if (data.nomor !== 1 && data.nomor !== 9) {
         </div>
     `;
 }
+
 🤝 Kontribusi & Credits
-Data Al-Qur'an dan Audio disediakan secara gratis oleh EQuran.id. Dikembangkan oleh Azmi Jalaluddin Amron sebagai bagian dari portofolio Fullstack Developer.
+Data Al-Qur'an dan Audio disediakan oleh EQuran.id. Dikembangkan oleh Azmi Jalaluddin Amron sebagai portofolio pengembangan aplikasi multi-platform.
 
 <p align="center"> Built with ❤️ by <a href="https://sourcecodejournal.dev">Source Code Journal</a> </p>
